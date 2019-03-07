@@ -18,7 +18,7 @@ public class ZoeScript : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody>();
+        //rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -33,7 +33,7 @@ public class ZoeScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             anim.SetTrigger(jump);
-            rb.AddForce(0, jumpPower, 0);
+            //rb.AddForce(0, jumpPower, 0);
         }
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -48,17 +48,17 @@ public class ZoeScript : MonoBehaviour
         {
             anim.SetTrigger(runhash);
             //transform.Translate(0, 0, move * runspeed);
-            rb.AddForce(0, 0, move * runspeed);
+            //rb.AddForce(0, 0, move * runspeed);
 
-            transform.Rotate(0, 0, lr * runrotatespeed);
-            transform.Translate(0, transform.position.y * -1, 0);
-            Debug.Log("running");
+            //transform.Rotate(0, 0, lr * runrotatespeed);
+            //transform.Translate(0, transform.position.y * -1, 0);
+            //Debug.Log("running");
         }
         else
         {
             //transform.Translate(movement * walkspeed);
-            rb.AddForce(movement * walkspeed);
-            transform.Translate(0, transform.position.y * -1, 0);
+            //rb.AddForce(movement * walkspeed);
+            //transform.Translate(0, transform.position.y * -1, 0);
 
         }
     }
